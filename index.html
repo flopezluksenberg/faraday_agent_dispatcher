@@ -17,7 +17,7 @@
         <meta name="author" content="Faradaysec">
       
       <link rel="shortcut icon" href="images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.b5d04df8.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.4dd2dd8d.min.css">
       
       
     
@@ -258,15 +258,11 @@
     
     <label class="md-nav__link" for="nav-3">
       Technical
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Technical" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Technical
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -280,6 +276,18 @@
   <li class="md-nav__item">
     <a href="technical/arch/" title="Architecture" class="md-nav__link">
       Architecture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="technical/agents/" title="Agents" class="md-nav__link">
+      Agents
     </a>
   </li>
 
@@ -325,11 +333,11 @@
                 
                 
                 <h1 id="easier-integrations-with-faraday-agents">Easier integrations with Faraday Agents<a class="headerlink" href="#easier-integrations-with-faraday-agents" title="Permanent link">&para;</a></h1>
-<p>Integrating systems is an elusive but mandatory job in any software product's 
+<p>Integrating systems is an elusive but mandatory job in any software product's
 life. Developers have to deal with languages they don't know, undocumented APIs
-or new paradigms. This leads to the fact that many product teams decide not to 
+or new paradigms. This leads to the fact that many product teams decide not to
 open the possibility to integrate to them.</p>
-<p>In <a href="https://github.com/infobyte/faraday">Faraday</a>’s case, we are aware that integrations with other security 
+<p>In <a href="https://github.com/infobyte/faraday">Faraday</a>’s case, we are aware that integrations with other security
 tools are a critical part of our product. However, we’ve realized that our
  <a href="https://github.com/infobyte/faraday_plugins">Plugin system</a> wasn't as easy as we expected to develop some
  integrations: it required some level of interactivity (either running a
@@ -337,10 +345,11 @@ tools are a critical part of our product. However, we’ve realized that our
  periodic basis. It also forced integration developers to use our Python API,
  even when the tool to integrate with wasn't programmed in Python, making it
  harder for the developer.</p>
-<p>To solve this problem, we have the <strong>Faraday Agents</strong>! You can use the <a href="getting-started/">getting 
+<p>To solve this problem, we have the <strong>Faraday Agents</strong>! You can use the <a href="getting-started/">getting
 started guide</a> to use one of our official executors, or code
- and use one custom executor. Otherwise, you can check our 
- <a href="technical/arch/">technical</a> section, to understand how the agents works. </p>
+ and use one custom executor. Otherwise, you can check our
+ <a href="technical/arch/">architecture</a> or <a href="technical/agents/">technical</a> section,
+ to understand how the agents works.</p>
                 
               
               
@@ -433,15 +442,15 @@ started guide</a> to use one of our official executors, or code
       
     </div>
     
-      <script src="assets/javascripts/vendor.92ffa368.min.js"></script>
-      <script src="assets/javascripts/bundle.5123e3d4.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: ".",
           features: ["tabs"],
           search: Object.assign({
-            worker: "assets/javascripts/worker/search.a68abb33.min.js"
+            worker: "assets/javascripts/worker/search.5eca75d3.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

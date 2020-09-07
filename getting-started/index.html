@@ -17,7 +17,7 @@
         <meta name="author" content="Faradaysec">
       
       <link rel="shortcut icon" href="../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.b5d04df8.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
       
       
     
@@ -242,9 +242,7 @@
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Getting started
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" title="Getting started" class="md-nav__link md-nav__link--active">
@@ -259,9 +257,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -345,15 +341,11 @@
     
     <label class="md-nav__link" for="nav-3">
       Technical
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Technical" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Technical
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -367,6 +359,18 @@
   <li class="md-nav__item">
     <a href="../technical/arch/" title="Architecture" class="md-nav__link">
       Architecture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../technical/agents/" title="Agents" class="md-nav__link">
+      Agents
     </a>
   </li>
 
@@ -394,9 +398,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -502,15 +504,15 @@ $ pip install .
 <div class="highlight"><pre><span></span><code>$ faraday-dispatcher config-wizard
 </code></pre></div>
 
-<p>The wizard will ask for which configuration you would set, the 
- <a href="#agent-configuration">agent configuration</a> or the 
+<p>The wizard will ask for which configuration you would set, the
+ <a href="#agent-configuration">agent configuration</a> or the
  <a href="#executors-configuration">executors configuration</a>.</p>
 <h3 id="agent-configuration">Agent configuration<a class="headerlink" href="#agent-configuration" title="Permanent link">&para;</a></h3>
 <p>The proper configuration differ if you want to use a SSL connection with your
  <a href="https://github.com/infobyte/faraday">Faraday</a> server. When using SSL you can use a self signed certificate!</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The token required can be taken in the http(s)://<strong>{faraday_server_host}</strong>/#/admin/agents  </p>
+<p>The token required can be taken in the http(s)://<strong>{faraday_server_host}</strong>/#/admin/agents</p>
 <p><img alt="token_example" src="../images/token.png" />
 Your token is: <em>ImalA8Cg1L6Z5Qbx2u9CFAsob</em></p>
 </div>
@@ -518,161 +520,161 @@ Your token is: <em>ImalA8Cg1L6Z5Qbx2u9CFAsob</em></p>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">https</label><div class="tabbed-content">
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>$ <strong>faraday-dispatcher config-wizard</strong><br />
-Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit? 
- (A, E, Q) [Q]: <strong>A</strong><br />
+<p>$ <strong>faraday-dispatcher config-wizard</strong>
+Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit?
+ (A, E, Q) [Q]: <strong>A</strong>
 <em>Section: server</em>
-host [127.0.0.1]:   <br />
-ssl [True]:<br />
-ssl_port [443]:<br />
-Default SSL behavior? (Y, N): <strong>N</strong><br />
-ssl_cert []:<br />
-<em>Trying to save with empty value</em><br />
-ssl_cert []: <strong>/home/path/to/the/cert.pub</strong><br />
-workspace [workspace]: <strong>sslWorkspace</strong><br />
-<em>Section: tokens</em><br />
-registration [ACorrectTokenIs25CharLen]: <strong>1234567890123456789012345</strong><br />
-<em>Section: agent</em><br />
-agent_name [agent]: <strong>sslAgent</strong><br />
-Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit? 
- (A, E, Q) [Q]: <strong>Q</strong>  </p>
+host [127.0.0.1]:
+ssl [True]:
+ssl_port [443]:
+Default SSL behavior? (Y, N): <strong>N</strong>
+ssl_cert []:
+<em>Trying to save with empty value</em>
+ssl_cert []: <strong>/home/path/to/the/cert.pub</strong>
+workspace [workspace]: <strong>sslWorkspace</strong>
+<em>Section: tokens</em>
+registration [ACorrectTokenIs25CharLen]: <strong>1234567890123456789012345</strong>
+<em>Section: agent</em>
+agent_name [agent]: <strong>sslAgent</strong>
+Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit?
+ (A, E, Q) [Q]: <strong>Q</strong></p>
 </div>
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">http</label><div class="tabbed-content">
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>$ <strong>faraday-dispatcher config-wizard</strong><br />
-Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit? 
- (A, E, Q) [Q]: <strong>A</strong><br />
+<p>$ <strong>faraday-dispatcher config-wizard</strong>
+Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit?
+ (A, E, Q) [Q]: <strong>A</strong>
 <em>Section: server</em>
-host [127.0.0.1]: <br />
-ssl [True]: <strong>False</strong><br />
-api_port [5985]:<br />
-websocket_port [9000]:<br />
-workspace [workspace]: <strong>sslFalseWorkspace</strong><br />
-<em>Section: tokens</em><br />
-registration [ACorrectTokenIs25CharLen]: <strong>1234567890123456789012345</strong><br />
-<em>Section: agent</em><br />
-agent_name [agent]: <strong>sslFalseAgent</strong><br />
-Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit? 
-(A, E, Q) [Q]: <strong>Q</strong>  </p>
+host [127.0.0.1]:
+ssl [True]: <strong>False</strong>
+api_port [5985]:
+websocket_port [9000]:
+workspace [workspace]: <strong>sslFalseWorkspace</strong>
+<em>Section: tokens</em>
+registration [ACorrectTokenIs25CharLen]: <strong>1234567890123456789012345</strong>
+<em>Section: agent</em>
+agent_name [agent]: <strong>sslFalseAgent</strong>
+Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit?
+(A, E, Q) [Q]: <strong>Q</strong></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>We stronglly recommend to use <code>https</code> if not using within localhost </p>
+<p>We stronglly recommend to use <code>https</code> if not using within localhost</p>
 </div>
 </div>
 </div>
 </div>
 <h3 id="executors-configuration">Executors configuration<a class="headerlink" href="#executors-configuration" title="Permanent link">&para;</a></h3>
-<p>When adding an executor you can set an executor with minimum configuration, 
- which ones we maintain, call as official executor; or your own custom 
- executors. </p>
-<p>In the next examples, you can see how to add a nessus executor, both as an 
+<p>When adding an executor you can set an executor with minimum configuration,
+ which ones we maintain, call as official executor; or your own custom
+ executors.</p>
+<p>In the next examples, you can see how to add a nessus executor, both as an
 official and custom executor:</p>
 <div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Official</label><div class="tabbed-content">
-<details class="example" open="open"><summary>Example</summary><p>$ <strong>faraday-dispatcher config-wizard</strong><br />
-Do you want to edit the [A]gent or the [E]xecutors? Do you want to 
-[Q]uit? (A, E, Q) [Q]: <strong>E</strong><br />
-The actual configured executors are: <em>[]</em><br />
-Do you want to [A]dd, [M]odify or [D]elete an executor? Do you want to 
-[Q]uit? (A, M, D, Q) [Q]: <strong>A</strong><br />
-Name: <strong>official</strong><br />
-Is a custom executor? (Y, N) [N]: <strong>N</strong><br />
-The executors are:<br />
-<em>1: wpscan.py</em><br />
-<em>2: sublist3r.sh</em><br />
-<em>3: nikto2.py</em><br />
-<em>4: nessus.py</em><br />
-<em>5: w3af.py</em><br />
-<em>+: Next page</em><br />
-<em>Q: Don't choose</em><br />
-Choose one: <strong>4</strong><br />
-Max data sent to server [65536]: <strong>65536</strong><br />
-Environment variable NESSUS_USERNAME value: <strong>username</strong><br />
-Environment variable NESSUS_PASSWORD value: <strong>password</strong><br />
-Environment variable NESSUS_URL value: <strong><a href="https://nessus_url.com">https://nessus_url.com</a></strong><br />
-The actual configured executors are: <em>['official']</em><br />
-Do you want to [A]dd, [M]odify or [D]elete an executor? Do you want to 
-[Q]uit? (A, M, D, Q) [Q]: <strong>Q</strong><br />
-Do you want to edit the [A]gent or the [E]xecutors? Do you want to 
-[Q]uit? (A, E, Q) [Q]: <strong>Q</strong>  </p>
+<details class="example" open="open"><summary>Example</summary><p>$ <strong>faraday-dispatcher config-wizard</strong>
+Do you want to edit the [A]gent or the [E]xecutors? Do you want to
+[Q]uit? (A, E, Q) [Q]: <strong>E</strong>
+The actual configured executors are: <em>[]</em>
+Do you want to [A]dd, [M]odify or [D]elete an executor? Do you want to
+[Q]uit? (A, M, D, Q) [Q]: <strong>A</strong>
+Name: <strong>official</strong>
+Is a custom executor? (Y, N) [N]: <strong>N</strong>
+The executors are:
+<em>1: wpscan.py</em>
+<em>2: sublist3r.sh</em>
+<em>3: nikto2.py</em>
+<em>4: nessus.py</em>
+<em>5: w3af.py</em>
+<em>+: Next page</em>
+<em>Q: Don't choose</em>
+Choose one: <strong>4</strong>
+Max data sent to server [65536]: <strong>65536</strong>
+Environment variable NESSUS_USERNAME value: <strong>username</strong>
+Environment variable NESSUS_PASSWORD value: <strong>password</strong>
+Environment variable NESSUS_URL value: <strong><a href="https://nessus_url.com">https://nessus_url.com</a></strong>
+The actual configured executors are: <em>['official']</em>
+Do you want to [A]dd, [M]odify or [D]elete an executor? Do you want to
+[Q]uit? (A, M, D, Q) [Q]: <strong>Q</strong>
+Do you want to edit the [A]gent or the [E]xecutors? Do you want to
+[Q]uit? (A, E, Q) [Q]: <strong>Q</strong></p>
 </details>
 </div>
 <input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Custom</label><div class="tabbed-content">
-<details class="example" open="open"><summary>Example</summary><p>$ <strong>faraday-dispatcher config-wizard</strong><br />
-Do you want to edit the [A]gent or the [E]xecutors? Do you want to 
-[Q]uit? (A, E, Q) [Q]: <strong>E</strong><br />
-The actual configured executors are: <em>[]</em><br />
-Do you want to [A]dd, [M]odify or [D]elete an executor? Do you want to 
-[Q]uit? (A, M, D, Q) [Q]: <strong>A</strong><br />
-Name: <strong>custom</strong><br />
-Is a custom executor? (Y, N) [N]: <strong>Y</strong><br />
-Command to execute [exit 1]: <strong>python3 
-{REPO_FOLDER}/faraday_agent_dispatcher/static/executors/official/nessus.py</strong><br />
-Max data sent to server [65536]: <strong>65536</strong><br />
-The actual custom executor's environment variables are: <em>[]</em><br />
-Do you want to [A]dd, [M]odify or [D]elete an environment variable? Do you 
- want to [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong><br />
+<details class="example" open="open"><summary>Example</summary><p>$ <strong>faraday-dispatcher config-wizard</strong>
+Do you want to edit the [A]gent or the [E]xecutors? Do you want to
+[Q]uit? (A, E, Q) [Q]: <strong>E</strong>
+The actual configured executors are: <em>[]</em>
+Do you want to [A]dd, [M]odify or [D]elete an executor? Do you want to
+[Q]uit? (A, M, D, Q) [Q]: <strong>A</strong>
+Name: <strong>custom</strong>
+Is a custom executor? (Y, N) [N]: <strong>Y</strong>
+Command to execute [exit 1]: <strong>python3
+{REPO_FOLDER}/faraday_agent_dispatcher/static/executors/official/nessus.py</strong>
+Max data sent to server [65536]: <strong>65536</strong>
+The actual custom executor's environment variables are: <em>[]</em>
+Do you want to [A]dd, [M]odify or [D]elete an environment variable? Do you
+ want to [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong>
 Environment variable name: <strong>NESSUS_USERNAME</strong>
-Environment variable value: <strong>username</strong><br />
-The actual custom executor's environment variables are: <strong>['nessus_username']</strong><br />
-Do you want to [A]dd, [M]odify or [D]elete an environment variable? Do you 
- want to [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong><br />
-Environment variable name: <strong>NESSUS_PASSWORD</strong><br />
-Environment variable value: <strong>password</strong><br />
+Environment variable value: <strong>username</strong>
+The actual custom executor's environment variables are: <strong>['nessus_username']</strong>
+Do you want to [A]dd, [M]odify or [D]elete an environment variable? Do you
+ want to [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong>
+Environment variable name: <strong>NESSUS_PASSWORD</strong>
+Environment variable value: <strong>password</strong>
 The actual custom executor's environment variables are: <em>['nessus_username',
- 'nessus_password']</em><br />
-Do you want to [A]dd, [M]odify or [D]elete an environment variable? Do you 
- want to [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong><br />
-Environment variable name: <strong>NESSUS_URL</strong><br />
-Environment variable value: <strong><a href="https://nessus_url.com">https://nessus_url.com</a></strong><br />
-The actual custom executor's environment variables are: <em>['nessus_username', 
- 'nessus_password', 'nessus_url']</em><br />
-Do you want to [A]dd, [M]odify or [D]elete an environment variable? Do you 
- want to [Q]uit? (A, M, D, Q) [Q]: <strong>Q</strong><br />
-The actual custom executor's arguments are: <em>[]</em><br />
-Do you want to [A]dd, [M]odify or [D]elete an argument? Do you want to 
- [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong><br />
-Argument name: <strong>NESSUS_SCAN_NAME</strong><br />
-Is mandatory? (Y, N): <strong>N</strong><br />
-The actual custom executor's arguments are: <em>['nessus_scan_name']</em><br />
-Do you want to [A]dd, [M]odify or [D]elete an argument? Do you want to 
- [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong><br />
-Argument name: <strong>NESSUS_URL</strong><br />
-Is mandatory? (Y, N): <strong>N</strong><br />
-The actual custom executor's arguments are: <em>['nessus_scan_name', 
- 'nessus_url']</em><br />
-Do you want to [A]dd, [M]odify or [D]elete an argument? Do you want to 
- [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong><br />
-Argument name: <strong>NESSUS_SCAN_TARGET</strong><br />
-Is mandatory? (Y, N): <strong>Y</strong><br />
-The actual custom executor's arguments are: <em>['nessus_scan_name', 
-'nessus_url', 'nessus_scan_target']</em><br />
-Do you want to [A]dd, [M]odify or [D]elete an argument? Do you want to 
- [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong><br />
-Argument name: <strong>NESSUS_SCAN_TEMPLATE</strong><br />
-Is mandatory? (Y, N): <strong>N</strong><br />
-The actual custom executor's arguments are: <em>['nessus_scan_name', 
-'nessus_url', 'nessus_scan_target', 'nessus_scan_template']</em><br />
-Do you want to [A]dd, [M]odify or [D]elete an argument? Do you want to 
- [Q]uit? (A, M, D, Q) [Q]: <strong>Q</strong><br />
-The actual configured executors are: <em>['custom']</em><br />
-Do you want to [A]dd, [M]odify or [D]elete an executor? Do you want to 
- [Q]uit? (A, M, D, Q) [Q]: <strong>Q</strong><br />
+ 'nessus_password']</em>
+Do you want to [A]dd, [M]odify or [D]elete an environment variable? Do you
+ want to [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong>
+Environment variable name: <strong>NESSUS_URL</strong>
+Environment variable value: <strong><a href="https://nessus_url.com">https://nessus_url.com</a></strong>
+The actual custom executor's environment variables are: <em>['nessus_username',
+ 'nessus_password', 'nessus_url']</em>
+Do you want to [A]dd, [M]odify or [D]elete an environment variable? Do you
+ want to [Q]uit? (A, M, D, Q) [Q]: <strong>Q</strong>
+The actual custom executor's arguments are: <em>[]</em>
+Do you want to [A]dd, [M]odify or [D]elete an argument? Do you want to
+ [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong>
+Argument name: <strong>NESSUS_SCAN_NAME</strong>
+Is mandatory? (Y, N): <strong>N</strong>
+The actual custom executor's arguments are: <em>['nessus_scan_name']</em>
+Do you want to [A]dd, [M]odify or [D]elete an argument? Do you want to
+ [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong>
+Argument name: <strong>NESSUS_URL</strong>
+Is mandatory? (Y, N): <strong>N</strong>
+The actual custom executor's arguments are: <em>['nessus_scan_name',
+ 'nessus_url']</em>
+Do you want to [A]dd, [M]odify or [D]elete an argument? Do you want to
+ [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong>
+Argument name: <strong>NESSUS_SCAN_TARGET</strong>
+Is mandatory? (Y, N): <strong>Y</strong>
+The actual custom executor's arguments are: <em>['nessus_scan_name',
+'nessus_url', 'nessus_scan_target']</em>
+Do you want to [A]dd, [M]odify or [D]elete an argument? Do you want to
+ [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong>
+Argument name: <strong>NESSUS_SCAN_TEMPLATE</strong>
+Is mandatory? (Y, N): <strong>N</strong>
+The actual custom executor's arguments are: <em>['nessus_scan_name',
+'nessus_url', 'nessus_scan_target', 'nessus_scan_template']</em>
+Do you want to [A]dd, [M]odify or [D]elete an argument? Do you want to
+ [Q]uit? (A, M, D, Q) [Q]: <strong>Q</strong>
+The actual configured executors are: <em>['custom']</em>
+Do you want to [A]dd, [M]odify or [D]elete an executor? Do you want to
+ [Q]uit? (A, M, D, Q) [Q]: <strong>Q</strong>
 Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit?
- (A, E, Q) [Q]: <strong>Q</strong>  </p>
+ (A, E, Q) [Q]: <strong>Q</strong></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Compared to the official executor example, this is more complex and 
-ask for both arguments and configuration environment variables. We 
-strongly recommend to read the <a href="../418/">custom</a> executors technical 
+<p>Compared to the official executor example, this is more complex and
+ask for both arguments and configuration environment variables. We
+strongly recommend to read the <a href="../technical/agents/#custom-executors">custom</a> executors technical
 section</p>
 </div>
 </details>
 </div>
 </div>
-<p>If you want to know how the executors work, you can check <a href="../418/">their</a> 
-technical section. </p>
+<p>If you want to know how the executors work, you can check <a href="../technical/agents/#executors">their</a>
+technical section.</p>
 <h2 id="running-the-agent">Running the agent<a class="headerlink" href="#running-the-agent" title="Permanent link">&para;</a></h2>
 <h3 id="start-the-agent">Start the agent<a class="headerlink" href="#start-the-agent" title="Permanent link">&para;</a></h3>
 <p>The dispatcher can be configured with the <code>run</code> command: <!--Add link to proper page--></p>
@@ -697,20 +699,19 @@ INFO - Connection to Faraday server succeeded
 <li>Click <code>Run</code></li>
 </ol>
 <details class="success" open="open"><summary>Expected output</summary><div class="highlight"><pre><span></span><code>INFO - Parsing data: <span class="o">{</span><span class="s2">&quot;execution_id&quot;</span>: XX, <span class="s2">&quot;agent_id&quot;</span>: XX, <span class="s2">&quot;action&quot;</span>: <span class="s2">&quot;RUN&quot;</span>, <span class="s2">&quot;executor&quot;</span>: <span class="o">{</span>EXECUTOR_NAME<span class="o">}</span>, <span class="s2">&quot;args&quot;</span>: <span class="o">{</span>EXECUTOR_ARGS<span class="o">}}</span>
-INFO - Running <span class="o">{</span>EXECUTOR_NAME<span class="o">}</span> executor   
+INFO - Running <span class="o">{</span>EXECUTOR_NAME<span class="o">}</span> executor
 <span class="o">[</span>Executor data<span class="o">]</span>
 INFO - Executor <span class="o">{</span>EXECUTOR_NAME<span class="o">}</span> finished successfully
 </code></pre></div>
 
 </details>
 <details class="fail" open="open"><summary>Error output</summary><div class="highlight"><pre><span></span><code>INFO - Parsing data: <span class="o">{</span><span class="s2">&quot;execution_id&quot;</span>: XX, <span class="s2">&quot;agent_id&quot;</span>: XX, <span class="s2">&quot;action&quot;</span>: <span class="s2">&quot;RUN&quot;</span>, <span class="s2">&quot;executor&quot;</span>: <span class="o">{</span>EXECUTOR_NAME<span class="o">}</span>, <span class="s2">&quot;args&quot;</span>: <span class="o">{</span>EXECUTOR_ARGS<span class="o">}}</span>
-INFO - Running <span class="o">{</span>EXECUTOR_NAME<span class="o">}</span> executor   
+INFO - Running <span class="o">{</span>EXECUTOR_NAME<span class="o">}</span> executor
 <span class="o">[</span>Executor data and errors<span class="o">]</span>
 WARNING - Executor <span class="o">{</span>EXECUTOR_NAME<span class="o">}</span> finished with <span class="nb">exit</span> code <span class="m">1</span>
 </code></pre></div>
 
 </details>
-<!-- TODO [executorss]: technical/executors.md [customm]: technical/executors.md#custom -->
                 
               
               
@@ -817,15 +818,15 @@ WARNING - Executor <span class="o">{</span>EXECUTOR_NAME<span class="o">}</span>
       
     </div>
     
-      <script src="../assets/javascripts/vendor.92ffa368.min.js"></script>
-      <script src="../assets/javascripts/bundle.5123e3d4.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: ["tabs"],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.a68abb33.min.js"
+            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

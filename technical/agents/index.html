@@ -11,7 +11,7 @@
         <meta name="description" content="Faraday Agent Dispatcher launches any security tools and send results to FaradaySEC">
       
       
-        <link rel="canonical" href="https://faradaysec.com/technical/arch/">
+        <link rel="canonical" href="https://faradaysec.com/technical/agents/">
       
       
         <meta name="author" content="Faradaysec">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Architecture - Faraday Agent Dispatcher</title>
+        <title>Agents - Faraday Agent Dispatcher</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#architecture" class="md-skip">
+        <a href="#agents" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Architecture
+              Agents
             
           </span>
         </div>
@@ -171,7 +171,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" class="md-tabs__link md-tabs__link--active">
+        <a href="../arch/" class="md-tabs__link md-tabs__link--active">
           Technical
         </a>
       
@@ -267,6 +267,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../arch/" title="Architecture" class="md-nav__link">
+      Architecture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -278,12 +290,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Architecture
+        Agents
         <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="./" title="Architecture" class="md-nav__link md-nav__link--active">
-      Architecture
+    <a href="./" title="Agents" class="md-nav__link md-nav__link--active">
+      Agents
     </a>
     
       
@@ -300,16 +312,83 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#faraday-server" class="md-nav__link">
-    Faraday server
+  <a href="#executors" class="md-nav__link">
+    Executors
   </a>
+  
+    <nav class="md-nav" aria-label="Executors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#official-executors" class="md-nav__link">
+    Official executors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-executors" class="md-nav__link">
+    Custom executors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#faraday-agent" class="md-nav__link">
-    Faraday agent
+  <a href="#dispatcher" class="md-nav__link">
+    Dispatcher
   </a>
+  
+    <nav class="md-nav" aria-label="Dispatcher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#communication-with-faraday" class="md-nav__link">
+    Communication with Faraday
+  </a>
+  
+    <nav class="md-nav" aria-label="Communication with Faraday">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rest-api" class="md-nav__link">
+    REST API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websockets" class="md-nav__link">
+    Websockets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-with-executors" class="md-nav__link">
+    Communication with executors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-the-agent-asynchronous" class="md-nav__link">
+    Why is the agent asynchronous?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -317,18 +396,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../agents/" title="Agents" class="md-nav__link">
-      Agents
-    </a>
   </li>
 
         
@@ -361,16 +428,83 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#faraday-server" class="md-nav__link">
-    Faraday server
+  <a href="#executors" class="md-nav__link">
+    Executors
   </a>
+  
+    <nav class="md-nav" aria-label="Executors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#official-executors" class="md-nav__link">
+    Official executors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-executors" class="md-nav__link">
+    Custom executors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#faraday-agent" class="md-nav__link">
-    Faraday agent
+  <a href="#dispatcher" class="md-nav__link">
+    Dispatcher
   </a>
+  
+    <nav class="md-nav" aria-label="Dispatcher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#communication-with-faraday" class="md-nav__link">
+    Communication with Faraday
+  </a>
+  
+    <nav class="md-nav" aria-label="Communication with Faraday">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rest-api" class="md-nav__link">
+    REST API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websockets" class="md-nav__link">
+    Websockets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-with-executors" class="md-nav__link">
+    Communication with executors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-the-agent-asynchronous" class="md-nav__link">
+    Why is the agent asynchronous?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -386,7 +520,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/infobyte/faraday_agent_dispatcher/edit/master/docs/technical/arch.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/infobyte/faraday_agent_dispatcher/edit/master/docs/technical/agents.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -394,31 +528,138 @@
                   
                 
                 
-                <h1 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h1>
-<p>Faraday is a web application, the <a href="https://github.com/infobyte/faraday">server</a> is made with Python using
- Flask. Its possible to automatize tool usage with Faraday <a href="https://github.com/infobyte/faraday_agent_dispatcher">agents</a>.</p>
-<p><img alt="Architecture" src="../../images/arch.png" /></p>
-<h2 id="faraday-server">Faraday server<a class="headerlink" href="#faraday-server" title="Permanent link">&para;</a></h2>
-<p>Faraday is accessed by a Web Browser or the <a href="https://github.com/infobyte/faraday-client">Faraday Client</a>.
-Both clients, communicate with Faraday Server via its <a href="https://api.faradaysec.com">REST API</a>.</p>
-<p>The server has other main components as the Report Processor, or the Websocket
- Server. The latter provides information to the Client.</p>
-<h2 id="faraday-agent">Faraday agent<a class="headerlink" href="#faraday-agent" title="Permanent link">&para;</a></h2>
-<p>The agent is an application composed by scripts discovering information,
- called <strong>executors</strong>. They can access any external services or use the
- Faraday's Report Processor.</p>
-<p>The data found by them is sent to the Faraday server by a middleware called
- <strong>Dispatcher</strong>, which will be the only module communicating with the server.
- Moreover, the Dispatcher is in charge of the scheduling of executors, backed
- by its implementation with <a href="https://docs.python.org/3/library/asyncio.html">asyncio</a>.</p>
-<p>The Dispatcher uses the <a href="https://api.faradaysec.com">Faraday API</a> to first communication and
- publishing the data, specially the <a href="https://api.faradaysec.com#BulkPost">bulk_create endpoint</a>. In
- addition, the only communication via the websocket server are the commands
- from faraday, such as which executor will run and its arguments values,
- execution status updates, etc. The executors communicates by the standard
- output the data to publish, and by the standard error any information about
- the run.</p>
-<!-- TODO See when launched -->
+                <h1 id="agents">Agents<a class="headerlink" href="#agents" title="Permanent link">&para;</a></h1>
+<p>Using <a href="https://github.com/infobyte/faraday">Faraday</a> to upload reports from tools is great. But when
+ automatizing a scan, it is not expected to write scripts mixing its Python API
+ configuration with the scan code. Moreover, if the scan code is in other
+ language and/or another host, there will be code mangling the http connection.</p>
+<p>On runtime, the Faraday Agent will be in charge of the connection, and be focus
+ on the code automatizing the scan.</p>
+<h2 id="executors">Executors<a class="headerlink" href="#executors" title="Permanent link">&para;</a></h2>
+<p><img alt="Architecture executors" src="../../images/arch_executors.png" /></p>
+<p>The important code which the Agent can run resides in the Executors, it can
+ be in any language, and interact with any other resources. The only expected
+ behaviour is as it were part of a shell pipeline, meaning that its output
+ is expected to by:</p>
+<ul>
+<li>stdout: Only relevant data sent to Faraday, it must be in json format,
+ expected to be received by the <a href="https://api.faradaysec.com">Faraday API</a></li>
+<li>stderr: All kind of info not relevant to Faraday, such as information
+  and errors.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">End of file</p>
+<p>Both <strong>stdout</strong> and <strong>stderr</strong> are assumed closed by receiving double <code>\n</code>.</p>
+</div>
+<p>Some executors are parametrized by:</p>
+<ul>
+<li>Environment variables: These contains fixed or private configuration,
+ such as API Tokens, directory or file path, etc.</li>
+<li>Arguments: These parameters comes from Faraday, and can differ between
+  executions, such as IP range, a feature flag, etc. All parameters
+  goes by environment variables, prefixed as <code>EXECUTOR_CONFIG_{PARAM_NAME}</code>
+  to not conflict with actual environment variables. It is configurable if they
+  are mandatory or not.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>All that configuration allows executor debugging being a lot more easier,
+not needing the Agent to be run, only with a shell command
+<div class="highlight"><pre><span></span><code>$ ./my_executor <span class="c1"># This assume, as within the agent, that the enviroment is ready</span>
+</code></pre></div></p>
+</div>
+<h3 id="official-executors">Official executors<a class="headerlink" href="#official-executors" title="Permanent link">&para;</a></h3>
+<p>The Faraday agent is shipped with some pre-configured executors. While
+ configuring the agent with the <a href="../../418/">configuration wizard</a>, it will already
+ know with are the environment variables and arguments. It will ask for the
+ variables values and will be ready to go. These executors are in
+ <code>faraday_agent_dispatcher/static/executors/official</code>, and all their
+ configuration is in its own manifest JSON file.</p>
+<h3 id="custom-executors">Custom executors<a class="headerlink" href="#custom-executors" title="Permanent link">&para;</a></h3>
+<p>When requiring a custom executor, its possible to configuring them with the
+ <a href="../../418/">configuration wizard</a>, and it will ask for which are the environment
+ variables and their value as for the parameters, and whether they are
+ mandatory or not.</p>
+<h2 id="dispatcher">Dispatcher<a class="headerlink" href="#dispatcher" title="Permanent link">&para;</a></h2>
+<p><img alt="Architecture dispatcher" src="../../images/arch_dispatcher.png" /></p>
+<p>The agent dispatcher is a middleware, between the executors, and the Faraday
+ server. It will handle the multiple processes and communication with them,
+ and with the server.</p>
+<h3 id="communication-with-faraday">Communication with Faraday<a class="headerlink" href="#communication-with-faraday" title="Permanent link">&para;</a></h3>
+<p>When communicating with Faraday there are some things to be aware of:</p>
+<ul>
+<li>The agent initiates the communication, no matter if it is registering
+  itself as a new agent or just connecting in an restart process.</li>
+<li>The server has a collection of Agents to run executors, and has the
+  ability to say when to run them. A never ending executor, <strong>always</strong>
+  receive the first start command from the server.</li>
+<li>For now, the agent only post data to the server, when any executor says
+  it has new data.</li>
+</ul>
+<p>That being said, it is clearly separated between two different type of
+ connection between Agent and server:</p>
+<ul>
+<li>REST API: General data, such as registering a new agent and publishing
+  new data. Its always the agent interacting with the server.</li>
+<li>Websockets: Commands data, its a separated protocol for agents management.</li>
+</ul>
+<h4 id="rest-api">REST API<a class="headerlink" href="#rest-api" title="Permanent link">&para;</a></h4>
+<p>Faraday has a vast REST API, and there are a few endpoints used by
+ the agent, which are used for:</p>
+<ul>
+<li><code>/</code>: Connectivity check.</li>
+<li><code>/_api/v2/agent_registration/</code>: Registration of a new agent.</li>
+<li><code>/_api/v2/agent_websocket_token/</code>: Get a <a href="#websockets">websocket</a> token.</li>
+<li><code>/_api/v2/ws/{workspace_name}/bulk_create/</code>: Publish data to a specific
+  workspace</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">REST API Documentarion</p>
+<p>For more info about the API, use its own <a href="https://api.faradaysec.com">documentation</a></p>
+</div>
+<h4 id="websockets">Websockets<a class="headerlink" href="#websockets" title="Permanent link">&para;</a></h4>
+<p>For commands, a bidirectional communication is expected between the Agent
+ and the server.
+The server can only send a <code>RUN</code> command, specifying which
+ executor to run, its parameters and to which workspace post the data. It
+ also has some metadata relevant to the faraday server to identify the
+ execution.</p>
+<p>The agent is able to notify the server with three actions:</p>
+<ul>
+<li><code>JOIN_AGENT</code>: Notify the server it is ready to run, which executors are
+  available and their params.</li>
+<li><code>LEAVE_AGENT</code>: Notify of disconnection.</li>
+<li><code>RUN_STATUS</code>: After a <code>RUN</code> command, notify if something was wrong and
+  won't run, or if the executor run successfully or not.</li>
+</ul>
+<h3 id="communication-with-executors">Communication with executors<a class="headerlink" href="#communication-with-executors" title="Permanent link">&para;</a></h3>
+<p><a href="#executors">As mentioned before</a>, executors take parameters and environment
+ variables as input methods, and standard files as stderr and stdout as
+ output methods.</p>
+<h3 id="why-is-the-agent-asynchronous">Why is the agent asynchronous?<a class="headerlink" href="#why-is-the-agent-asynchronous" title="Permanent link">&para;</a></h3>
+<p>There are some reasons for that:</p>
+<ol>
+<li>It is expected the dispatcher runs multiples executors at the same time,
+ and isn't waiting to be finished while midway data is ready to be sent.</li>
+<li>Moreover, the dispatcher is just a IO-bound middleware, waiting for
+ news from the server or the executors.</li>
+<li>Finally, the executors can be written in any language, that
+ means they can be in the same process.</li>
+</ol>
+<p>All these features can be accomplished by using Python <a href="https://docs.python.org/3/library/asyncio.html">asyncio</a>
+ in the development of it. So, the dispatcher is a single-process with
+ single-threading. Its living coroutines basically are:</p>
+<ul>
+<li>A waiting coroutine for web-sockets commands.</li>
+<li>A launch executor coroutine.</li>
+<li>The listen a stderr and stdout from executor coroutines.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>As its mentioned there are only 3 types of living coroutines, but are
+multiple running. The main coroutine is always running or waiting, and 3
+more coroutines are running for each executor.</p>
+</div>
                 
               
               
@@ -437,7 +678,7 @@ Both clients, communicate with Faraday Server via its <a href="https://api.farad
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../getting-started/" title="Getting started" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../arch/" title="Architecture" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -446,25 +687,11 @@ Both clients, communicate with Faraday Server via its <a href="https://api.farad
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Getting started
+                Architecture
               </div>
             </div>
           </a>
         
-        
-          <a href="../agents/" title="Agents" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Agents
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
         
       </nav>
     </div>
