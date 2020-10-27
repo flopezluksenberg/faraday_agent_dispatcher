@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -17,7 +15,7 @@
         <meta name="author" content="Faradaysec">
       
       <link rel="shortcut icon" href="../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
     
     
       
@@ -25,13 +23,17 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        
       
     
     
     
       
+        
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
@@ -50,9 +52,14 @@
   </head>
   
   
-    <body dir="ltr">
-  
     
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -68,7 +75,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://faradaysec.com" title="Faraday Agent Dispatcher" class="md-header-nav__button md-logo" aria-label="Faraday Agent Dispatcher">
       
@@ -142,8 +151,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
           
@@ -189,7 +196,9 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://faradaysec.com" title="Faraday Agent Dispatcher" class="md-nav__button md-logo" aria-label="Faraday Agent Dispatcher">
       
@@ -220,7 +229,7 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="Home" class="md-nav__link">
+    <a href=".." class="md-nav__link">
       Home
     </a>
   </li>
@@ -245,7 +254,7 @@
         <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="./" title="Getting started" class="md-nav__link md-nav__link--active">
+    <a href="./" class="md-nav__link md-nav__link--active">
       Getting started
     </a>
     
@@ -357,7 +366,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../technical/arch/" title="Architecture" class="md-nav__link">
+    <a href="../technical/arch/" class="md-nav__link">
       Architecture
     </a>
   </li>
@@ -369,7 +378,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../technical/agents/" title="Agents" class="md-nav__link">
+    <a href="../technical/agents/" class="md-nav__link">
       Agents
     </a>
   </li>
@@ -481,29 +490,23 @@
                   </a>
                 
                 
-                  
-                
-                
                 <h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
 <h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">pip</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>$ pip install faraday_agent_dispatcher
 </code></pre></div>
-
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">git</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>$ git clone https://github.com/infobyte/faraday_agent_dispatcher.git
 $ <span class="nb">cd</span> faraday_agent_dispatcher
 $ pip install .
 </code></pre></div>
-
 </div>
 </div>
 <h2 id="configure-your-agent">Configure your agent<a class="headerlink" href="#configure-your-agent" title="Permanent link">&para;</a></h2>
 <p>The dispatcher can be configured with the <code>wizard</code> command: <!--Add link to proper page--></p>
 <div class="highlight"><pre><span></span><code>$ faraday-dispatcher config-wizard
 </code></pre></div>
-
 <p>The wizard will ask for which configuration you would set, the
  <a href="#agent-configuration">agent configuration</a> or the
  <a href="#executors-configuration">executors configuration</a>.</p>
@@ -520,44 +523,44 @@ Your token is: <em>ImalA8Cg1L6Z5Qbx2u9CFAsob</em></p>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">https</label><div class="tabbed-content">
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>$ <strong>faraday-dispatcher config-wizard</strong>
-Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit?
- (A, E, Q) [Q]: <strong>A</strong>
-<em>Section: server</em>
-host [127.0.0.1]:
-ssl [True]:
-ssl_port [443]:
-Default SSL behavior? (Y, N): <strong>N</strong>
-ssl_cert []:
-<em>Trying to save with empty value</em>
-ssl_cert []: <strong>/home/path/to/the/cert.pub</strong>
-workspace [workspace]: <strong>sslWorkspace</strong>
-<em>Section: tokens</em>
-registration [ACorrectTokenIs25CharLen]: <strong>1234567890123456789012345</strong>
-<em>Section: agent</em>
-agent_name [agent]: <strong>sslAgent</strong>
-Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit?
- (A, E, Q) [Q]: <strong>Q</strong></p>
+<p>$ <strong>faraday-dispatcher config-wizard</strong><br />
+Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit?<br />
+ (A, E, Q) [Q]: <strong>A</strong><br />
+<em>Section: server</em><br />
+host [127.0.0.1]:<br />
+ssl [True]:<br />
+ssl_port [443]:<br />
+Default SSL behavior? (Y, N): <strong>N</strong><br />
+ssl_cert []:<br />
+<em>Trying to save with empty value</em><br />
+ssl_cert []: <strong>/home/path/to/the/cert.pub</strong><br />
+workspace [workspace]: <strong>sslWorkspace</strong><br />
+<em>Section: tokens</em><br />
+registration [ACorrectTokenIs25CharLen]: <strong>1234567890123456789012345</strong><br />
+<em>Section: agent</em><br />
+agent_name [agent]: <strong>sslAgent</strong><br />
+Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit?<br />
+ (A, E, Q) [Q]: <strong>Q</strong>  </p>
 </div>
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">http</label><div class="tabbed-content">
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>$ <strong>faraday-dispatcher config-wizard</strong>
-Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit?
- (A, E, Q) [Q]: <strong>A</strong>
-<em>Section: server</em>
-host [127.0.0.1]:
-ssl [True]: <strong>False</strong>
-api_port [5985]:
-websocket_port [9000]:
-workspace [workspace]: <strong>sslFalseWorkspace</strong>
-<em>Section: tokens</em>
-registration [ACorrectTokenIs25CharLen]: <strong>1234567890123456789012345</strong>
-<em>Section: agent</em>
-agent_name [agent]: <strong>sslFalseAgent</strong>
-Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit?
-(A, E, Q) [Q]: <strong>Q</strong></p>
+<p>$ <strong>faraday-dispatcher config-wizard</strong><br />
+Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit?<br />
+ (A, E, Q) [Q]: <strong>A</strong><br />
+<em>Section: server</em><br />
+host [127.0.0.1]:<br />
+ssl [True]: <strong>False</strong><br />
+api_port [5985]:<br />
+websocket_port [9000]:<br />
+workspace [workspace]: <strong>sslFalseWorkspace</strong><br />
+<em>Section: tokens</em><br />
+registration [ACorrectTokenIs25CharLen]: <strong>1234567890123456789012345</strong><br />
+<em>Section: agent</em><br />
+agent_name [agent]: <strong>sslFalseAgent</strong><br />
+Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit?<br />
+(A, E, Q) [Q]: <strong>Q</strong>  </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>We stronglly recommend to use <code>https</code> if not using within localhost</p>
@@ -572,97 +575,97 @@ Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit?
 <p>In the next examples, you can see how to add a nessus executor, both as an
 official and custom executor:</p>
 <div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Official</label><div class="tabbed-content">
-<details class="example" open="open"><summary>Example</summary><p>$ <strong>faraday-dispatcher config-wizard</strong>
-Do you want to edit the [A]gent or the [E]xecutors? Do you want to
-[Q]uit? (A, E, Q) [Q]: <strong>E</strong>
-The actual configured executors are: <em>[]</em>
-Do you want to [A]dd, [M]odify or [D]elete an executor? Do you want to
-[Q]uit? (A, M, D, Q) [Q]: <strong>A</strong>
-Name: <strong>official</strong>
-Is a custom executor? (Y, N) [N]: <strong>N</strong>
-The executors are:
-<em>1: wpscan.py</em>
-<em>2: sublist3r.sh</em>
-<em>3: nikto2.py</em>
-<em>4: nessus.py</em>
-<em>5: w3af.py</em>
-<em>+: Next page</em>
-<em>Q: Don't choose</em>
-Choose one: <strong>4</strong>
-Max data sent to server [65536]: <strong>65536</strong>
-Environment variable NESSUS_USERNAME value: <strong>username</strong>
-Environment variable NESSUS_PASSWORD value: <strong>password</strong>
-Environment variable NESSUS_URL value: <strong><a href="https://nessus_url.com">https://nessus_url.com</a></strong>
-The actual configured executors are: <em>['official']</em>
-Do you want to [A]dd, [M]odify or [D]elete an executor? Do you want to
-[Q]uit? (A, M, D, Q) [Q]: <strong>Q</strong>
-Do you want to edit the [A]gent or the [E]xecutors? Do you want to
-[Q]uit? (A, E, Q) [Q]: <strong>Q</strong></p>
+<details class="example" open="open"><summary>Example</summary><p>$ <strong>faraday-dispatcher config-wizard</strong><br />
+Do you want to edit the [A]gent or the [E]xecutors? Do you want to<br />
+[Q]uit? (A, E, Q) [Q]: <strong>E</strong><br />
+The actual configured executors are: <em>[]</em><br />
+Do you want to [A]dd, [M]odify or [D]elete an executor? Do you want to<br />
+[Q]uit? (A, M, D, Q) [Q]: <strong>A</strong><br />
+Name: <strong>official</strong><br />
+Is a custom executor? (Y, N) [N]: <strong>N</strong><br />
+The executors are:<br />
+<em>1: wpscan.py</em><br />
+<em>2: sublist3r.sh</em><br />
+<em>3: nikto2.py</em><br />
+<em>4: nessus.py</em><br />
+<em>5: w3af.py</em><br />
+<em>+: Next page</em><br />
+<em>Q: Don't choose</em><br />
+Choose one: <strong>4</strong><br />
+Max data sent to server [65536]: <strong>65536</strong><br />
+Environment variable NESSUS_USERNAME value: <strong>username</strong><br />
+Environment variable NESSUS_PASSWORD value: <strong>password</strong><br />
+Environment variable NESSUS_URL value: <strong><a href="https://nessus_url.com">https://nessus_url.com</a></strong><br />
+The actual configured executors are: <em>['official']</em><br />
+Do you want to [A]dd, [M]odify or [D]elete an executor? Do you want to<br />
+[Q]uit? (A, M, D, Q) [Q]: <strong>Q</strong><br />
+Do you want to edit the [A]gent or the [E]xecutors? Do you want to<br />
+[Q]uit? (A, E, Q) [Q]: <strong>Q</strong>  </p>
 </details>
 </div>
 <input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Custom</label><div class="tabbed-content">
-<details class="example" open="open"><summary>Example</summary><p>$ <strong>faraday-dispatcher config-wizard</strong>
+<details class="example" open="open"><summary>Example</summary><p>$ <strong>faraday-dispatcher config-wizard</strong><br />
 Do you want to edit the [A]gent or the [E]xecutors? Do you want to
-[Q]uit? (A, E, Q) [Q]: <strong>E</strong>
-The actual configured executors are: <em>[]</em>
+[Q]uit? (A, E, Q) [Q]: <strong>E</strong><br />
+The actual configured executors are: <em>[]</em><br />
 Do you want to [A]dd, [M]odify or [D]elete an executor? Do you want to
-[Q]uit? (A, M, D, Q) [Q]: <strong>A</strong>
-Name: <strong>custom</strong>
-Is a custom executor? (Y, N) [N]: <strong>Y</strong>
+[Q]uit? (A, M, D, Q) [Q]: <strong>A</strong><br />
+Name: <strong>custom</strong><br />
+Is a custom executor? (Y, N) [N]: <strong>Y</strong><br />
 Command to execute [exit 1]: <strong>python3
-{REPO_FOLDER}/faraday_agent_dispatcher/static/executors/official/nessus.py</strong>
-Max data sent to server [65536]: <strong>65536</strong>
-The actual custom executor's environment variables are: <em>[]</em>
+{REPO_FOLDER}/faraday_agent_dispatcher/static/executors/official/nessus.py</strong><br />
+Max data sent to server [65536]: <strong>65536</strong><br />
+The actual custom executor's environment variables are: <em>[]</em><br />
 Do you want to [A]dd, [M]odify or [D]elete an environment variable? Do you
- want to [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong>
-Environment variable name: <strong>NESSUS_USERNAME</strong>
-Environment variable value: <strong>username</strong>
-The actual custom executor's environment variables are: <strong>['nessus_username']</strong>
+ want to [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong><br />
+Environment variable name: <strong>NESSUS_USERNAME</strong><br />
+Environment variable value: <strong>username</strong><br />
+The actual custom executor's environment variables are: <strong>['nessus_username']</strong><br />
 Do you want to [A]dd, [M]odify or [D]elete an environment variable? Do you
- want to [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong>
-Environment variable name: <strong>NESSUS_PASSWORD</strong>
-Environment variable value: <strong>password</strong>
+ want to [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong><br />
+Environment variable name: <strong>NESSUS_PASSWORD</strong><br />
+Environment variable value: <strong>password</strong><br />
 The actual custom executor's environment variables are: <em>['nessus_username',
- 'nessus_password']</em>
+ 'nessus_password']</em><br />
 Do you want to [A]dd, [M]odify or [D]elete an environment variable? Do you
- want to [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong>
-Environment variable name: <strong>NESSUS_URL</strong>
-Environment variable value: <strong><a href="https://nessus_url.com">https://nessus_url.com</a></strong>
+ want to [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong><br />
+Environment variable name: <strong>NESSUS_URL</strong><br />
+Environment variable value: <strong><a href="https://nessus_url.com">https://nessus_url.com</a></strong><br />
 The actual custom executor's environment variables are: <em>['nessus_username',
- 'nessus_password', 'nessus_url']</em>
+ 'nessus_password', 'nessus_url']</em><br />
 Do you want to [A]dd, [M]odify or [D]elete an environment variable? Do you
- want to [Q]uit? (A, M, D, Q) [Q]: <strong>Q</strong>
-The actual custom executor's arguments are: <em>[]</em>
+ want to [Q]uit? (A, M, D, Q) [Q]: <strong>Q</strong><br />
+The actual custom executor's arguments are: <em>[]</em><br />
 Do you want to [A]dd, [M]odify or [D]elete an argument? Do you want to
- [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong>
-Argument name: <strong>NESSUS_SCAN_NAME</strong>
-Is mandatory? (Y, N): <strong>N</strong>
-The actual custom executor's arguments are: <em>['nessus_scan_name']</em>
+ [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong><br />
+Argument name: <strong>NESSUS_SCAN_NAME</strong><br />
+Is mandatory? (Y, N): <strong>N</strong><br />
+The actual custom executor's arguments are: <em>['nessus_scan_name']</em><br />
 Do you want to [A]dd, [M]odify or [D]elete an argument? Do you want to
- [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong>
-Argument name: <strong>NESSUS_URL</strong>
-Is mandatory? (Y, N): <strong>N</strong>
+ [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong><br />
+Argument name: <strong>NESSUS_URL</strong><br />
+Is mandatory? (Y, N): <strong>N</strong><br />
 The actual custom executor's arguments are: <em>['nessus_scan_name',
- 'nessus_url']</em>
+ 'nessus_url']</em><br />
 Do you want to [A]dd, [M]odify or [D]elete an argument? Do you want to
- [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong>
-Argument name: <strong>NESSUS_SCAN_TARGET</strong>
-Is mandatory? (Y, N): <strong>Y</strong>
+ [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong><br />
+Argument name: <strong>NESSUS_SCAN_TARGET</strong><br />
+Is mandatory? (Y, N): <strong>Y</strong><br />
 The actual custom executor's arguments are: <em>['nessus_scan_name',
-'nessus_url', 'nessus_scan_target']</em>
+'nessus_url', 'nessus_scan_target']</em><br />
 Do you want to [A]dd, [M]odify or [D]elete an argument? Do you want to
- [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong>
-Argument name: <strong>NESSUS_SCAN_TEMPLATE</strong>
-Is mandatory? (Y, N): <strong>N</strong>
+ [Q]uit? (A, M, D, Q) [Q]: <strong>A</strong><br />
+Argument name: <strong>NESSUS_SCAN_TEMPLATE</strong><br />
+Is mandatory? (Y, N): <strong>N</strong><br />
 The actual custom executor's arguments are: <em>['nessus_scan_name',
-'nessus_url', 'nessus_scan_target', 'nessus_scan_template']</em>
+'nessus_url', 'nessus_scan_target', 'nessus_scan_template']</em><br />
 Do you want to [A]dd, [M]odify or [D]elete an argument? Do you want to
- [Q]uit? (A, M, D, Q) [Q]: <strong>Q</strong>
-The actual configured executors are: <em>['custom']</em>
+ [Q]uit? (A, M, D, Q) [Q]: <strong>Q</strong><br />
+The actual configured executors are: <em>['custom']</em><br />
 Do you want to [A]dd, [M]odify or [D]elete an executor? Do you want to
- [Q]uit? (A, M, D, Q) [Q]: <strong>Q</strong>
+ [Q]uit? (A, M, D, Q) [Q]: <strong>Q</strong><br />
 Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit?
- (A, E, Q) [Q]: <strong>Q</strong></p>
+ (A, E, Q) [Q]: <strong>Q</strong>  </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Compared to the official executor example, this is more complex and
@@ -680,7 +683,6 @@ technical section.</p>
 <p>The dispatcher can be configured with the <code>run</code> command: <!--Add link to proper page--></p>
 <div class="highlight"><pre><span></span><code>$ faraday-dispatcher run
 </code></pre></div>
-
 <details class="success" open="open"><summary>Expected output</summary><p>The expected output when the dispatcher run command is as follows
 <div class="highlight"><pre><span></span><code>$ faraday-dispatcher run
 INFO - token_registration_url: <span class="o">{</span>faraday_host<span class="o">}</span>/_api/v2/ws/agent2/agent_registration/
@@ -703,14 +705,12 @@ INFO - Running <span class="o">{</span>EXECUTOR_NAME<span class="o">}</span> exe
 <span class="o">[</span>Executor data<span class="o">]</span>
 INFO - Executor <span class="o">{</span>EXECUTOR_NAME<span class="o">}</span> finished successfully
 </code></pre></div>
-
 </details>
 <details class="fail" open="open"><summary>Error output</summary><div class="highlight"><pre><span></span><code>INFO - Parsing data: <span class="o">{</span><span class="s2">&quot;execution_id&quot;</span>: XX, <span class="s2">&quot;agent_id&quot;</span>: XX, <span class="s2">&quot;action&quot;</span>: <span class="s2">&quot;RUN&quot;</span>, <span class="s2">&quot;executor&quot;</span>: <span class="o">{</span>EXECUTOR_NAME<span class="o">}</span>, <span class="s2">&quot;args&quot;</span>: <span class="o">{</span>EXECUTOR_ARGS<span class="o">}}</span>
 INFO - Running <span class="o">{</span>EXECUTOR_NAME<span class="o">}</span> executor
 <span class="o">[</span>Executor data and errors<span class="o">]</span>
 WARNING - Executor <span class="o">{</span>EXECUTOR_NAME<span class="o">}</span> finished with <span class="nb">exit</span> code <span class="m">1</span>
 </code></pre></div>
-
 </details>
                 
               
@@ -730,7 +730,7 @@ WARNING - Executor <span class="o">{</span>EXECUTOR_NAME<span class="o">}</span>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href=".." title="Home" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href=".." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -745,7 +745,7 @@ WARNING - Executor <span class="o">{</span>EXECUTOR_NAME<span class="o">}</span>
           </a>
         
         
-          <a href="../technical/arch/" title="Architecture" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../technical/arch/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -818,15 +818,15 @@ WARNING - Executor <span class="o">{</span>EXECUTOR_NAME<span class="o">}</span>
       
     </div>
     
-      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
-      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "..",
-          features: ["tabs"],
+          features: ['navigation.tabs'],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
