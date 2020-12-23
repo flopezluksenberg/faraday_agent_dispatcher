@@ -9,22 +9,24 @@
         <meta name="description" content="Faraday Agent Dispatcher launches any security tools and send results to FaradaySEC">
       
       
+        <link rel="canonical" href="https://faradaysec.com/misc/docker/">
+      
       
         <meta name="author" content="Faradaysec">
       
-      <link rel="shortcut icon" href="images/favicon.png">
+      <link rel="shortcut icon" href="../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
     
     
       
-        <title>Faraday Agent Dispatcher</title>
+        <title>Docker - Faraday Agent Dispatcher</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bc7e593a.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab28b872.min.css">
         
       
     
@@ -39,7 +41,7 @@
     
     
     
-      <link rel="stylesheet" href="css/faraday_doc.css">
+      <link rel="stylesheet" href="../../css/faraday_doc.css">
     
       <link rel="stylesheet" href="https://unpkg.com/mermaid@8.5.1/dist/mermaid.css">
     
@@ -63,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#agent-docker-image" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -74,7 +81,7 @@
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://faradaysec.com" title="Faraday Agent Dispatcher" class="md-header-nav__button md-logo" aria-label="Faraday Agent Dispatcher">
       
-  <img src="images/logo.svg" alt="logo">
+  <img src="../../images/logo.svg" alt="logo">
 
     </a>
     <label class="md-header-nav__button md-icon" for="__drawer">
@@ -88,7 +95,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              
+              Docker
             
           </span>
         </div>
@@ -148,14 +155,16 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="." class="md-tabs__link md-tabs__link--active">
+      <a href="../.." class="md-tabs__link">
         Home
       </a>
     
@@ -169,7 +178,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="technical/arch/" class="md-tabs__link">
+        <a href="../../technical/arch/" class="md-tabs__link">
           Technical
         </a>
       
@@ -182,7 +191,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="misc/docker/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link md-tabs__link--active">
           Misc
         </a>
       
@@ -208,7 +217,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="https://faradaysec.com" title="Faraday Agent Dispatcher" class="md-nav__button md-logo" aria-label="Faraday Agent Dispatcher">
       
-  <img src="images/logo.svg" alt="logo">
+  <img src="../../images/logo.svg" alt="logo">
 
     </a>
     Faraday Agent Dispatcher
@@ -235,7 +244,7 @@
 
 
   <li class="md-nav__item">
-    <a href="." class="md-nav__link">
+    <a href="../.." class="md-nav__link">
       Home
     </a>
   </li>
@@ -247,7 +256,7 @@
 
 
   <li class="md-nav__item">
-    <a href="getting-started/" class="md-nav__link">
+    <a href="../../getting-started/" class="md-nav__link">
       Getting started
     </a>
   </li>
@@ -280,7 +289,7 @@
 
 
   <li class="md-nav__item">
-    <a href="technical/arch/" class="md-nav__link">
+    <a href="../../technical/arch/" class="md-nav__link">
       Architecture
     </a>
   </li>
@@ -292,7 +301,7 @@
 
 
   <li class="md-nav__item">
-    <a href="technical/agents/" class="md-nav__link">
+    <a href="../../technical/agents/" class="md-nav__link">
       Agents
     </a>
   </li>
@@ -307,10 +316,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Misc
@@ -328,11 +339,62 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="misc/docker/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Docker
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Docker
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#templates" class="md-nav__link">
+    Templates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -348,12 +410,103 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#templates" class="md-nav__link">
+    Templates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                  <a href="https://github.com/infobyte/faraday_agent_dispatcher/edit/master/docs/misc/docker.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="agent-docker-image">Agent Docker image<a class="headerlink" href="#agent-docker-image" title="Permanent link">&para;</a></h1>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<p>The image is already published in our <a href="https://hub.docker.com/u/faradaysec">dockehub page</a>, so you just
+ have to pull our image with the following command</p>
+<div class="highlight"><pre><span></span><code>$ docker pull faradaysec/faraday_agent_dispatcher
+</code></pre></div>
+<p>After that you only need a .ini file to pass to the image. We already have some
+ <a href="#templates">templates</a> to use. For these you have to edit it in
+ the first lines:</p>
+<div class="highlight"><pre><span></span><code><span class="k">[server]</span>
+<span class="c1">; TODO be replaced with network configuration</span>
+<span class="na">host</span> <span class="o">=</span> <span class="s">localhost</span>
+<span class="na">ssl</span> <span class="o">=</span> <span class="s">False</span>
+<span class="na">api_port</span> <span class="o">=</span> <span class="s">5985</span>
+<span class="na">websocket_port</span> <span class="o">=</span> <span class="s">9000</span>
+<span class="na">ssl_cert</span> <span class="o">=</span>
+<span class="c1">; TODO be filled with available workspaces</span>
+<span class="na">workspaces</span> <span class="o">=</span>
 
+<span class="k">[tokens]</span>
+<span class="c1">; TODO be filled with the registration token (see https://docs.agents.faradaysec.com/getting-started/)</span>
+<span class="na">registration</span> <span class="o">=</span>
+</code></pre></div>
+<p>After setting the values in the .ini file, you can run the agent as:</p>
+<div class="highlight"><pre><span></span><code>$ docker run -v <span class="o">{</span>ABSOLUTE_PATH_TO_INI<span class="o">}</span>:/root/.faraday/config/dispatcher.ini -it faradaysec/faraday_agent_dispatcher
+</code></pre></div>
+<h3 id="templates">Templates<a class="headerlink" href="#templates" title="Permanent link">&para;</a></h3>
+<p>We currently have 2 templates:</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Base Agent</label><div class="tabbed-content">
+<p>This <a href="../template_dispatcher.ini">template</a> use is as simple as shown above<br />
+<div class="highlight"><pre><span></span><code>$ docker run -v <span class="o">{</span>ABSOLUTE_PATH_TO_INI<span class="o">}</span>:/root/.faraday/config/dispatcher.ini -it faradaysec/faraday_agent_dispatcher
+</code></pre></div></p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">With reports</label><div class="tabbed-content">
+<p>This <a href="../template_dispatcher_with_report.ini">template</a> adds the possibility
+of use a path to read reports from the host machine.
+<div class="highlight"><pre><span></span><code>$ docker run -v <span class="o">{</span>ABSOLUTE_PATH_TO_INI<span class="o">}</span>:/root/.faraday/config/dispatcher.ini  -v <span class="o">{</span>ABSOLUTE_PATH_TO_REPORT_FOLDER<span class="o">}</span>:/root/reports/ -it faradaysec/faraday_agent_dispatcher
+</code></pre></div>
+Then you can process any report by just specifying the route to the report
+file as an executor parameter</p>
+</div>
+</div>
+                
+              
               
                 
 
@@ -366,6 +519,27 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../technical/agents/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Agents
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -423,15 +597,15 @@
       
     </div>
     
-      <script src="assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
-          base: "",
+          base: "../..",
           features: ['navigation.tabs'],
           search: Object.assign({
-            worker: "assets/javascripts/worker/search.4ac00218.min.js"
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
