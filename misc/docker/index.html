@@ -481,25 +481,26 @@
 <span class="na">ssl_cert</span> <span class="o">=</span>
 <span class="c1">; TODO be filled with available workspaces</span>
 <span class="na">workspaces</span> <span class="o">=</span>
-
-<span class="k">[tokens]</span>
-<span class="c1">; TODO be filled with the registration token (see https://docs.agents.faradaysec.com/getting-started/)</span>
-<span class="na">registration</span> <span class="o">=</span>
 </code></pre></div>
 <p>After setting the values in the .ini file, you can run the agent as:</p>
-<div class="highlight"><pre><span></span><code>$ docker run -v <span class="o">{</span>ABSOLUTE_PATH_TO_INI<span class="o">}</span>:/root/.faraday/config/dispatcher.ini -it faradaysec/faraday_agent_dispatcher
+<div class="highlight"><pre><span></span><code>$ docker run -v <span class="o">{</span>ABSOLUTE_PATH_TO_INI<span class="o">}</span>:/root/.faraday/config/dispatcher.ini -it faradaysec/faraday_agent_dispatcher --token<span class="o">={</span>TOKEN<span class="o">}</span>
 </code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>As we explain in the <a href="../../getting-started/">getting started guide</a>, you only need the token the first time you run
+an agent</p>
+</div>
 <h3 id="templates">Templates<a class="headerlink" href="#templates" title="Permanent link">&para;</a></h3>
 <p>We currently have 2 templates:</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Base Agent</label><div class="tabbed-content">
 <p>This <a href="../template_dispatcher.ini">template</a> use is as simple as shown above<br />
-<div class="highlight"><pre><span></span><code>$ docker run -v <span class="o">{</span>ABSOLUTE_PATH_TO_INI<span class="o">}</span>:/root/.faraday/config/dispatcher.ini -it faradaysec/faraday_agent_dispatcher
+<div class="highlight"><pre><span></span><code>$ docker run -v <span class="o">{</span>ABSOLUTE_PATH_TO_INI<span class="o">}</span>:/root/.faraday/config/dispatcher.ini -it faradaysec/faraday_agent_dispatcher --token<span class="o">={</span>TOKEN<span class="o">}</span>
 </code></pre></div></p>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">With reports</label><div class="tabbed-content">
 <p>This <a href="../template_dispatcher_with_report.ini">template</a> adds the possibility
 of use a path to read reports from the host machine.
-<div class="highlight"><pre><span></span><code>$ docker run -v <span class="o">{</span>ABSOLUTE_PATH_TO_INI<span class="o">}</span>:/root/.faraday/config/dispatcher.ini  -v <span class="o">{</span>ABSOLUTE_PATH_TO_REPORT_FOLDER<span class="o">}</span>:/root/reports/ -it faradaysec/faraday_agent_dispatcher
+<div class="highlight"><pre><span></span><code>$ docker run -v <span class="o">{</span>ABSOLUTE_PATH_TO_INI<span class="o">}</span>:/root/.faraday/config/dispatcher.ini  -v <span class="o">{</span>ABSOLUTE_PATH_TO_REPORT_FOLDER<span class="o">}</span>:/root/reports/ -it faradaysec/faraday_agent_dispatcher --token<span class="o">={</span>TOKEN<span class="o">}</span>
 </code></pre></div>
 Then you can process any report by just specifying the route to the report
 file as an executor parameter</p>

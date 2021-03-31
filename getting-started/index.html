@@ -562,14 +562,8 @@ $ pip install .
  <a href="#agent-configuration">agent configuration</a> or the
  <a href="#executors-configuration">executors configuration</a>.</p>
 <h3 id="agent-configuration">Agent configuration<a class="headerlink" href="#agent-configuration" title="Permanent link">&para;</a></h3>
-<p>The proper configuration differ if you want to use a SSL connection with your
- <a href="https://github.com/infobyte/faraday">Faraday</a> server. When using SSL you can use a self signed certificate!</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>The token required can be taken in the http(s)://<strong>{faraday_server_host}</strong>/#/admin/agents</p>
-<p><img alt="token_example" src="../images/token.png" />
-Your token is: <em>ImalA8Cg1L6Z5Qbx2u9CFAsob</em></p>
-</div>
+<p>The proper configuration differ if you want to use SSL connection with your
+ <a href="https://github.com/infobyte/faraday">Faraday</a> server. When using SSL you can use a self-signed certificate!</p>
 <p>Examples:</p>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">https</label><div class="tabbed-content">
 <div class="admonition example">
@@ -586,8 +580,6 @@ ssl_cert []:<br />
 <em>Trying to save with empty value</em><br />
 ssl_cert []: <strong>/home/path/to/the/cert.pub</strong><br />
 workspace [workspace]: <strong>sslWorkspace</strong><br />
-<em>Section: tokens</em><br />
-registration [ACorrectTokenIs25CharLen]: <strong>1234567890123456789012345</strong><br />
 <em>Section: agent</em><br />
 agent_name [agent]: <strong>sslAgent</strong><br />
 Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit?<br />
@@ -606,8 +598,6 @@ ssl [True]: <strong>False</strong><br />
 api_port [5985]:<br />
 websocket_port [9000]:<br />
 workspace [workspace]: <strong>sslFalseWorkspace</strong><br />
-<em>Section: tokens</em><br />
-registration [ACorrectTokenIs25CharLen]: <strong>1234567890123456789012345</strong><br />
 <em>Section: agent</em><br />
 agent_name [agent]: <strong>sslFalseAgent</strong><br />
 Do you want to edit the [A]gent or the [E]xecutors? Do you want to [Q]uit?<br />
@@ -731,14 +721,24 @@ section</p>
 technical section.</p>
 <h2 id="running-the-agent">Running the agent<a class="headerlink" href="#running-the-agent" title="Permanent link">&para;</a></h2>
 <h3 id="start-the-agent">Start the agent<a class="headerlink" href="#start-the-agent" title="Permanent link">&para;</a></h3>
-<p>The dispatcher can be configured with the <code>run</code> command: <!--Add link to proper page--></p>
-<div class="highlight"><pre><span></span><code>$ faraday-dispatcher run
+<p>The first time you run an agent, you need a token provided by the server
+That required token can be taken from the http(s)://<strong>{faraday_server_host}</strong>/#/admin/agents</p>
+<p>For example in:
+<img alt="token_example" src="../images/token.png" />
+Your token is: <em>562107</em></p>
+<p>The dispatcher can be executed with the <code>run</code> command, passing this token as an option: <!--Add link to proper
+page--></p>
+<div class="highlight"><pre><span></span><code>$ faraday-dispatcher run --token<span class="o">={</span>TOKEN<span class="o">}</span>
 </code></pre></div>
 <details class="success" open="open"><summary>Expected output</summary><p>The expected output when the dispatcher run command is as follows
 <div class="highlight"><pre><span></span><code>$ faraday-dispatcher run
-INFO - token_registration_url: <span class="o">{</span>faraday_host<span class="o">}</span>/_api/v2/ws/agent2/agent_registration/
+INFO - token_registration_url: <span class="o">{</span>faraday_host<span class="o">}</span>/_api/v3/ws/agent2/agent_registration
 INFO - Registered successfully
 INFO - Connection to Faraday server succeeded
+</code></pre></div></p>
+</details>
+<details class="warning" open="open"><summary>Warning</summary><p>The token is only needed the first time you run an agent, afterward you can run it without the option, as:
+<div class="highlight"><pre><span></span><code>$ faraday-dispatcher run
 </code></pre></div></p>
 </details>
 <h3 id="running-an-executor-from-faraday">Running an executor from faraday<a class="headerlink" href="#running-an-executor-from-faraday" title="Permanent link">&para;</a></h3>

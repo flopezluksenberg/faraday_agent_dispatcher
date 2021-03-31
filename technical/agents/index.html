@@ -664,10 +664,10 @@ not needing the Agent to be run, only with a shell command
 <p>Faraday has a vast REST API, and there are a few endpoints used by
  the agent, which are used for:</p>
 <ul>
-<li><code>/</code>: Connectivity check.</li>
-<li><code>/_api/v2/agent_registration/</code>: Registration of a new agent.</li>
-<li><code>/_api/v2/agent_websocket_token/</code>: Get a <a href="#websockets">websocket</a> token.</li>
-<li><code>/_api/v2/ws/{workspace_name}/bulk_create/</code>: Publish data to a specific
+<li><code>/_api/v3/info</code>: Connectivity check.</li>
+<li><code>/_api/v3/agent_registration</code>: Registration of a new agent.</li>
+<li><code>/_api/v3/agent_websocket_token</code>: Get a <a href="#websockets">websocket</a> token.</li>
+<li><code>/_api/v3/ws/{workspace_name}/bulk_create</code>: Publish data to a specific
   workspace</li>
 </ul>
 <div class="admonition info">
